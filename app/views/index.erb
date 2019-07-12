@@ -1,0 +1,13 @@
+<h1>Tweet Home Page</h1>
+<p>Please sign in or signup below</p>
+<nav>
+  <% if logged_in? %>
+    <p>Welcome <% current_user.username %></p>
+    <a href="/logout">Log Out</a>
+    <a href="/tweets/new">Create new Tweet</a>
+  <% else %>
+  
+    <a href="/login">Login</a>
+    <a href="/signup">Sign Up</a>
+  <% end %>
+</nav>
